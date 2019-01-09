@@ -36,6 +36,10 @@ RequestTecnico requestTecnico= new  RequestTecnico();
             call.enqueue(new Callback<JsonObject>() {
                 @Override
                 public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                    if (response.code() == 400 ) {
+                        Log.e("errr","onResponse - Status : " + response.code());
+
+                        }
                     JsonObject userJson = response.body().getAsJsonObject("LogOnResult");
                     Log.d("response2", userJson.get("Usuario").getAsString());
                     Log.d("response3", userJson.get("Token").getAsString());

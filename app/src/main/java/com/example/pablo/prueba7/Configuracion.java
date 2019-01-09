@@ -35,6 +35,7 @@ public class Configuracion extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         CS = (Button)findViewById(R.id.CS);
+        Error.Errores(this);
         CS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -52,7 +52,7 @@ public class Inicio extends AppCompatActivity
         direccion = (TextView)findViewById(R.id.direccion);
         setSupportActionBar(toolbar);
         Grafica();
-
+        Error.Errores(this);
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

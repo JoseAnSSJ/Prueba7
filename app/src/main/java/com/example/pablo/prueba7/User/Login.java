@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.pablo.prueba7.Error;
 import com.example.pablo.prueba7.Inicio;
 import com.example.pablo.prueba7.ListOrd.RequestListOrd;
 import com.example.pablo.prueba7.R;
@@ -65,26 +66,7 @@ public class Login extends AppCompatActivity {
         */
 
 
-        Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
-            @Override
-            public void uncaughtException(final Thread paramThread, Throwable paramThrowable) {
-
-                new Thread() {
-                    @Override
-                    public void run() {
-                        Looper.prepare();
-                        Toast.makeText(getApplicationContext(),"Error la aplicacion",Toast.LENGTH_LONG).show();
-                        Looper.loop();
-                    }
-                }.start();
-                try
-                {
-                    Thread.sleep(4000); // Let the Toast display before app will get shutdown
-                }
-                catch (InterruptedException e) {    }
-                System.exit(2);
-            }
-        });
+        Error.Errores(this);
 
         entrar.setOnClickListener(new View.OnClickListener() {
             @Override

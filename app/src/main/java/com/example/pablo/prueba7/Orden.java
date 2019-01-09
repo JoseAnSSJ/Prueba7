@@ -29,7 +29,7 @@ public class Orden extends AppCompatActivity
         setContentView(R.layout.activity_orden);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        Error.Errores(this);
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

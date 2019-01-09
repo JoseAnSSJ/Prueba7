@@ -22,8 +22,10 @@
         android:layout_marginBottom="203dp"
         android:hint="Usuario"
         android:textSize="30dp"
+        android:maxLines="1"
         android:id="@+id/usurio"
         android:text="SISTE"
+        android:singleLine="true"
         />
 
     <EditText
@@ -36,6 +38,7 @@
         android:hint="Contraseña"
         android:text="0601x-2L"
         android:textSize="30dp"
+            android:singleLine="true"
         android:id="@+id/contraseña"
         />
 
